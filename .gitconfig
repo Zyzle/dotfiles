@@ -1,0 +1,12 @@
+[user]
+	name = Colin McCulloch
+	email = colin@zyzle.dev
+[core]
+	editor = nano
+[init]
+	defaultBranch = master
+[alias]
+	hist = log --oneline --decorate --graph
+	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	sweep = "!f() { git branch --merged | grep -Ev '(*|master|develop)' | xargs -n 1 git branch -d; }; f"
