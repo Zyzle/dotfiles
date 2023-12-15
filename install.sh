@@ -9,6 +9,7 @@ xcode-select --install
 brew update
 brew tap homebrew/cask-fonts
 brew install font-fira-code-nerd-font
+brew install --cask stats
 
 # --- Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
